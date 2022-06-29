@@ -1,11 +1,7 @@
-import re
-from sqlite3 import connect
-from urllib import response
 from urllib.parse import unquote
 from flask import Flask, request
 from flask_cors import CORS
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36'
@@ -37,17 +33,14 @@ Object.defineProperty(navigator, 'plugins', { get: () => [1, 2, 3, 4, 5,6], }); 
   '''
 })
 
-
+# 开启跨域支持
 CORS(app, resources=r'/*')
-
 
 @app.route('/')
 def main():
     return 'Hello World'
 
 # 获取列表数据
-
-
 @app.route('/play/list')
 def playList():
     title = request.args['title']

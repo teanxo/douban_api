@@ -22,7 +22,7 @@
 
 
 接口API
-- 列表页：/play/list?title=影视名称
+- 列表页：/play/list?title=影视名称&page=当前页数
 - 详情页：/play/detail?d=列表页返回的detail_url或影视详情页链接
 
 只供学习参考，请勿商业使用！！
